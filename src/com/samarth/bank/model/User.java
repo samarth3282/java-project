@@ -1,11 +1,10 @@
-package gr.aueb.cf.model;
+package com.samarth.bank.model;
 
 /**
  * The {@code User} class represents a user or a holder of a bank account.
- * A user is identifiable by a social security number (SSN) and has a first name and a last name.
+ * A user is identifiable by a social security number (SSN) and has a first name
+ * and a last name.
  * The User class extends IdentifiableEntity to include a unique ID.
- *
- * @author Ntirintis John
  */
 public class User extends IdentifiableEntity {
     private String firstName;
@@ -15,14 +14,16 @@ public class User extends IdentifiableEntity {
     /**
      * Default constructor initializing an empty user.
      */
-    public User() {}
+    public User() {
+    }
 
     /**
-     * Overloaded constructor initializing a user with first name, last name, and social security number.
+     * Overloaded constructor initializing a user with first name, last name, and
+     * social security number.
      *
      * @param firstName the first name of the user
-     * @param lastName the last name of the user
-     * @param ssn the social security number of the user
+     * @param lastName  the last name of the user
+     * @param ssn       the social security number of the user
      */
     public User(String firstName, String lastName, String ssn) {
         this.firstName = firstName;
@@ -35,7 +36,7 @@ public class User extends IdentifiableEntity {
      *
      * @param user the user to be copied
      */
-    public User(User user){
+    public User(User user) {
         firstName = user.getFirstName();
         lastName = user.getLastName();
         ssn = user.getSsn();
@@ -68,7 +69,8 @@ public class User extends IdentifiableEntity {
 
     /**
      * Returns a string representation of the user.
-     * The returned string includes the user's first name, last name, and social security number.
+     * The returned string includes the user's first name, last name, and social
+     * security number.
      *
      * @return a string representation of the user
      */

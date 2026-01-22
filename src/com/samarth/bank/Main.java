@@ -1,23 +1,22 @@
-package gr.aueb.cf;
+package com.samarth.bank;
 
-import gr.aueb.cf.exceptions.InsufficientAmountException;
-import gr.aueb.cf.exceptions.InsufficientBalanceException;
-import gr.aueb.cf.exceptions.SsnNotValidException;
-import gr.aueb.cf.model.Account;
-import gr.aueb.cf.model.OverdraftAccount;
-import gr.aueb.cf.model.OverdraftJointAccount;
-import gr.aueb.cf.model.User;
+import com.samarth.bank.exceptions.InsufficientAmountException;
+import com.samarth.bank.exceptions.InsufficientBalanceException;
+import com.samarth.bank.exceptions.SsnNotValidException;
+import com.samarth.bank.model.Account;
+import com.samarth.bank.model.OverdraftAccount;
+import com.samarth.bank.model.OverdraftJointAccount;
+import com.samarth.bank.model.User;
 
 /**
- * The {@code Main} class demonstrates the functionality of Account, OverdraftAccount,
+ * The {@code Main} class demonstrates the functionality of Account,
+ * OverdraftAccount,
  * and OverdraftJointAccount by simulating deposit and withdrawal operations.
- *
- * @author Ntirintis John
  */
 public class Main {
     public static void main(String[] args) {
         User john = new User("John", "N.", "2424");
-        User michael =  new User("Michael", "W. ", "1234");
+        User michael = new User("Michael", "W. ", "1234");
 
         Account acc = new Account(john, "GR2424", 100);
         Account overJohn = new OverdraftAccount(john, "GR2424", 50);
@@ -30,7 +29,7 @@ public class Main {
             overJointAccount.deposit(100);
             overJointAccount.withdraw(50, "2424");
             System.out.println("Overdraft joint account: \n" + overJointAccount);
-        } catch (InsufficientAmountException | InsufficientBalanceException | SsnNotValidException e){
+        } catch (InsufficientAmountException | InsufficientBalanceException | SsnNotValidException e) {
             System.out.println(e.getMessage());
         }
     }

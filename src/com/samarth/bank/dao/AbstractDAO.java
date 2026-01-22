@@ -1,18 +1,16 @@
-package gr.aueb.cf.dao;
+package com.samarth.bank.dao;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Ntirintis John
- */
-public abstract class AbstractDAO<T> implements IGenericDAO<T>{
+public abstract class AbstractDAO<T> implements IGenericDAO<T> {
 
     // Data Source
     private final Map<Long, T> storage = new HashMap<>();
     private Class<T> persistentClass;
 
-    public AbstractDAO() {}
+    public AbstractDAO() {
+    }
 
     public Class<T> getPersistentClass() {
         return persistentClass;

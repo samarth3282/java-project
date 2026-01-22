@@ -1,15 +1,11 @@
-package gr.aueb.cf.dao;
+package com.samarth.bank.dao;
 
-import gr.aueb.cf.model.Account;
+import com.samarth.bank.model.Account;
 
-/**
- * @author Ntirintis John
- */
 public class AccountDAOImpl extends AbstractDAO<Account> implements IAccountDAO {
 
     public AccountDAOImpl() {
         this.setPersistentClass(Account.class);
     }
-
 
 }

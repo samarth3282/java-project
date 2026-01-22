@@ -1,8 +1,5 @@
-package gr.aueb.cf.exceptions;
+package com.samarth.bank.exceptions;
 
-/**
- * @author Ntirintis John
- */
 public class SsnNotValidException extends Exception {
     private static final long serialVersionUID = 1234L;
 
